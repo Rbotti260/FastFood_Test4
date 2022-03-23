@@ -19,8 +19,7 @@ public class Help {
         String aboutText = "This is a self service kiosk designed for restaurant customers to \n" +
                 "to place their own orders. " + "When the customer \n" +
                 "presses the checkout button, the total price of the order including the \n" +
-                "the sales tax will populate, prompting the user for payment.\n" +
-                "This revision was simplified to meet the parameters defined by the instructor.";
+                "the sales tax will populate, prompting the user for payment.\n";
 
         System.out.println("About:\n" + aboutText + "\n\nPress enter to continue");
         enter.nextLine();
