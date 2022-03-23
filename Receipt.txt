@@ -1,0 +1,14 @@
+You have 11 items in your shopping cart.
+Your order number is: 281
+1. Chicken Tenders
+2. Hamburger
+3. Hot Dog
+4. Cheese Steak
+5. Veggie Burger
+6. Veggie Burger
+7. Veggie Burger
+8. Veggie Burger
+9. Veggie Burger
+10. Cheese Steak
+11. Chicken Tenders
+The total price of your order is:  $101.23
