@@ -26,9 +26,12 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 
 public class FastFoodController implements Initializable {
     private static OrderList menuList = new OrderList();
@@ -60,9 +63,6 @@ public class FastFoodController implements Initializable {
     protected ListProperty<Double> listPrice = new SimpleListProperty<>();
     //private static OrderList menuPrice = new OrderList();
 
-
-    //boolean quit = false; //Boolean statement to quit application.
-    //int selection = 0;  int variable to store users selection.
 
 
     public void btnHamburger(ActionEvent e) {
@@ -135,35 +135,32 @@ public class FastFoodController implements Initializable {
     }
 
 
-//
-//    try {
-//        // Create a buffered stream
-//        Scanner input = new Scanner(new File("Receipt.txt"));
-//
-//        // Read a line and append the line to the text area
-//        while (input.hasNext()) {
-//            receiptTextArea.appendText(input.nextLine() + '\n');
-//        }
-//        input.close();
-//    } catch (FileNotFoundException ex) {
-//        System.out.println("File not found: " + "Receipt.txt");
-//    } catch (Exception ex) {
-//        System.out.println(ex.getMessage());
-//    }
+
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         subTotal.setText(Double.toString(menuList.totalPrice()));
 
-        //subTotal.textProperty().bind(menuList.totalPrice().textProperty());
-
-
-        //subTotal.textProperty().bind(menuList.totalPriceToString());
 
 
         lvOrderList.itemsProperty().bind(listProperty);
         lvOrderPrice.itemsProperty().bind(listPrice);
+
+            try {
+        // Create a buffered stream
+        Scanner input = new Scanner(new File("Receipt.txt"));
+
+        // Read a line and append the line to the text area
+        while (input.hasNext()) {
+            receiptTextArea.appendText(input.nextLine() + '\n');
+        }
+        input.close();
+    } catch (FileNotFoundException ex) {
+        System.out.println("File not found: " + "Receipt.txt");
+    } catch (Exception ex) {
+        System.out.println(ex.getMessage());
+    }
 
     }
 
@@ -185,12 +182,6 @@ public class FastFoodController implements Initializable {
     public void btnClose(ActionEvent event) {
         Platform.exit();
     }
-
-
-
-
-
-
 
 }
 
