@@ -21,8 +21,8 @@ public class HelloApplication extends Application {
     public void start(Stage primaryStage) throws IOException {
 
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("FastFood.fxml"));
-        Scene scene1 = new Scene(fxmlLoader.load(), 1292, 864);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Welcome.fxml"));
+        Scene scene1 = new Scene(fxmlLoader.load());
         primaryStage.setTitle("Hello!");
         primaryStage.setScene(scene1);
         primaryStage.show();
@@ -31,7 +31,7 @@ public class HelloApplication extends Application {
 
 
     public static void main(String[] args) {
-        Help.about();
+        //Help.about();
         launch();
     }
 }

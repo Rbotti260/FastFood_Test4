@@ -1,7 +1,7 @@
 You have 4 items in your shopping cart.
-Your order number is: 311
+Your order number is: 779
 1. Hamburger
 2. Chicken Tenders
 3. Cheese Steak
-4. Veggie Burger
-The total price of your order is:  $38.43
+4. Hot Dog
+The total price of your order is:  $35.78

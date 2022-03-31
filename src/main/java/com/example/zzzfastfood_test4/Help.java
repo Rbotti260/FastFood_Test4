@@ -7,10 +7,12 @@
 //***************************************************************
 package com.example.zzzfastfood_test4;
 
+import javafx.scene.control.TextArea;
+
 import java.util.Scanner;
 
 public class Help {
-    public static void about() {
+    public static TextArea about() {
 
         Scanner enter = new Scanner(System.in);
         /** Displays the about page representing the function of this application
@@ -21,8 +23,10 @@ public class Help {
                 "presses the checkout button, the total price of the order including the \n" +
                 "the sales tax will populate, prompting the user for payment.\n";
 
+
         System.out.println("About:\n" + aboutText + "\n\nPress enter to continue");
         enter.nextLine();
+        return null;
     }
 
 }
